@@ -1,6 +1,9 @@
 Forums::Application.routes.draw do
   resources :posts
-  root :to => "posts#index"
+  resource :login, :only => [:create, :destroy], :controller => 'sessions'
+  resource :users, :only => [:new, :create, :edit, :update]
+  match "/home" => "posts#index"
+  root :to => "sessions#new"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

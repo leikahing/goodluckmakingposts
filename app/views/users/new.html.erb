@@ -1,0 +1,16 @@
+<header id="new_user_header">
+<h1>Make a Post - create account</h1>
+</header>
+<section id="new_user_section">
+<% form_for @user do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit 'create user' %>
+<% end %>
+</section>
