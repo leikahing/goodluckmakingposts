@@ -2,7 +2,12 @@
 <h1>Make a Post - create account</h1>
 </header>
 <section id="new_user_section">
-<% form_for @user do |f| %>
+<div class='errors'>
+  <% @user.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+</div>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
   <%= f.label :email %>
   <%= f.text_field :email %>
   <%= f.label :username %>
@@ -11,6 +16,8 @@
   <%= f.password_field :password %>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
   <%= f.submit 'create user' %>
 <% end %>
 </section>

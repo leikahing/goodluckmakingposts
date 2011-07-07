@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
 
   create_table "posts", :force => true do |t|
     t.integer  "previous_id"
+    t.integer  "user_id"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
@@ -29,6 +30,10 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
     t.boolean  "is_moderator"
     t.boolean  "is_banned"
     t.string   "preferences"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

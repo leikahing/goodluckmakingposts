@@ -1,6 +1,7 @@
 <%= link_to "Create new post", new_post_path %><br />
 <% @posts.each do |post| %>
-<b><%=h post.title %></b><br />
-<%=h post.content %><br />
+  <%= image_tag current_user.avatar.url(:thumb) %>
+  <b><%=h post.title %></b><br />
+  <%=h post.content %><br />
 <% end %>
 

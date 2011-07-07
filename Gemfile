@@ -7,6 +7,7 @@ gem 'jquery-rails'
 
 # utility gems
 gem 'kaminari'
+gem 'paperclip'
 
 # asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
