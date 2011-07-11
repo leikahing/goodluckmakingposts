@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
   create_table "posts", :force => true do |t|
     t.integer  "previous_id"
     t.integer  "user_id"
+    t.integer  "thread_id"
+    t.integer  "post_number"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
@@ -23,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
 
   create_table "users", :force => true do |t|
     t.string   "password_digest"
-    t.string   "username"
+    t.string   "name"
     t.string   "email"
     t.string   "title"
     t.boolean  "is_admin"

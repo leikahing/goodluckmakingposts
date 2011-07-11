@@ -3,5 +3,22 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+@font-face {
+  font-family: raleway;
+  src: url('fonts/raleway_thin.eot');
+  src: local(raleway), url('fonts/raleway_thin.ttf') format('opentype');
+}
+
+body {
+  background-color: black;
+}
+
+#forum_page {
+  padding: 20px 50px 20px 50px;
+  max-width: 960px;
+  min-width: 480px;
+  margin: auto;
+}

@@ -4,8 +4,8 @@
 <section id="login_section">
 <%= flash[:error] %>
 <%= form_tag login_url, id: "login_form" do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   <%= submit_tag 'login' %>

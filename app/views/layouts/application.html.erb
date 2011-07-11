@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav></nav>
+  <nav>
+    <%= link_to "logout", login_url, :method => :delete %>
+  </nav>
   <section id="forum_page">
     <%= yield %>
   </section>

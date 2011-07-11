@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   serialize :preferences
 
-  validates_presence_of :username, :email
-  validates_uniqueness_of :username, :email
+  validates_presence_of :name, :email
+  validates_uniqueness_of :name, :email
 
 end

@@ -1,0 +1,41 @@
+.post {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #373737;
+  color: white;
+  font-family: raleway, sans-serif;
+  // , "HelveticaNeue-Light", "Helvetica Neue Light",
+//Light               "Helvetica Neue", sans-serif;
+
+  .avatar {
+    float: left;
+  }
+
+  .user_info {
+    padding-left: 60px;
+    padding-right: 20px;
+    .user_name {
+      margin-top: -10px;
+      font-size: 25px;
+      float: left;
+    }
+
+    .user_title {
+      font-family: raleway, sans-serif;
+      float: left;
+    }
+
+    .user_status {
+      float: right;
+    }
+  }
+
+  .post_info {
+    padding-left: 60px;
+    padding-right: 20px;
+
+    .post_content {
+    }
+  }
+}

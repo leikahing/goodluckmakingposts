@@ -1,7 +1,9 @@
-<%= link_to "Create new post", new_post_path %><br />
-<% @posts.each do |post| %>
-  <%= image_tag current_user.avatar.url(:thumb) %>
-  <b><%=h post.title %></b><br />
-  <%=h post.content %><br />
-<% end %>
+<header class="posts_header">
+  <%= link_to "Add Reply", new_post_url %>
+</header>
 
+<%= render @posts %>
+
+<footer class="posts_footer">
+  <%= link_to "Add Reply", new_post_url %>
+</footer>

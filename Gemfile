@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 # core application gems
 gem 'rails', '3.1.0.rc4'
-gem 'sqlite3'
+gem 'pg'
 gem 'jquery-rails'
 
 # utility gems

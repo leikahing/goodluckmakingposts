@@ -3,6 +3,9 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.integer :previous_id
       t.integer :user_id
+      t.integer :thread_id
+
+      t.integer :post_number
       t.string :title
       t.text :content
 
