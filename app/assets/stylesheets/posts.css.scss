@@ -1,0 +1,66 @@
+.posts_header {
+  font-weight: 100;
+  font-size: 24pt;
+  margin-top: 20px;
+
+  a {
+    font-size: 18pt;
+  }
+
+  img {
+    float: right;
+    position: relative;
+    top: 10px;
+  }
+}
+
+.post {
+  margin-top: 20px;
+  background-color: #373737;
+  color: white;
+  min-height: 100px;
+
+  .avatar {
+    padding-top: 10px;
+    float: left;
+  }
+
+  .user_info {
+    padding: 6px 10px 10px 10px;
+    height: 4px;
+
+    .user_name {
+      font-size: 20pt;
+      font-weight: 100;
+      padding-left: 10px;
+      margin-top: -6px;
+      float: left;
+    }
+
+    .user_title {
+      float: left;
+      margin-left: 20px;
+      color: gray;
+    }
+
+    .user_status {
+      float: right;
+    }
+  }
+
+  .post_content {
+    padding: 0 20px 0 90px;
+
+    p {
+      overflow: auto;
+      padding: 5px 0 0 10px;
+    }
+  }
+}
+
+.add_post {
+  float:right;
+  padding: 6px 10px 6px 10px;
+  margin: 3px 0 3px 0;
+  background-color: #333333;
+}

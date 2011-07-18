@@ -1,9 +1,9 @@
-<div class="post">
+<div class="post clearfix">
   <div class="avatar">
     <%= image_tag post.user.avatar.url(:thumb) %>
   </div>
 
- <div class="user_info clearfix">
+  <div class="user_info">
     <div class="user_name">
       <%=h post.user.name %>
     </div>
@@ -16,9 +16,7 @@
       Logged In
     </div>
   </div>
-  <div class="post_info clearfix">
-    <div class="post_content">
-      <%=h post.content %>
-    </div>
+  <div class="post_content">
+    <p><%=h post.content %></p>
   </div>
 </div>

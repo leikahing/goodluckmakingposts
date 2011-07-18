@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   skip_before_filter :require_login, :only => [:new, :create]
+  layout "login", :only => [ :new, :create ]
 
   def new
     @user = User.new params[:user]
@@ -14,5 +15,9 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+
   end
 end

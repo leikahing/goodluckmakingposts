@@ -1,5 +1,5 @@
 <header id="new_user_header">
-<h1>Make a Post - create account</h1>
+<h1>create account</h1>
 </header>
 <section id="new_user_section">
 <div class='errors'>
@@ -8,16 +8,11 @@
   <% end %>
 </div>
 <%= form_for @user, :html => { :multipart => true } do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <%= f.label :avatar %>
-  <%= f.file_field :avatar %>
-  <%= f.submit 'create user' %>
+  email<%= f.label :email; f.text_field :email %>
+  name<%= f.label :name; f.text_field :name %>
+  password<%= f.label :password; f.password_field :password %>
+  password confirmation<%= f.label :password_confirmation; f.password_field :password_confirmation %>
+  avatar<%= f.label :avatar; f.file_field :avatar %>
+  <%= f.submit 'submit' %>
 <% end %>
 </section>

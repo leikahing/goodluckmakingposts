@@ -6,19 +6,60 @@
  *= require_tree .
 */
 
-@font-face {
-  font-family: raleway;
-  src: url('fonts/raleway_thin.eot');
-  src: local(raleway), url('fonts/raleway_thin.ttf') format('opentype');
-}
-
 body {
   background-color: black;
+  color: #a6a6a6;
+  font-family: 'Segoe UI Light', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  margin: auto;
+  max-width: 940px;
+  min-width: 560px;
 }
 
-#forum_page {
-  padding: 20px 50px 20px 50px;
-  max-width: 960px;
-  min-width: 480px;
-  margin: auto;
+h1 {
+  font-weight: 100;
+  font-size: 36pt;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 24pt;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 18pt;
+}
+
+hr, label { display: none; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover { color: #f00 }
+}
+
+input {
+  background: #000;
+  border: 1px solid #4d4d4d;
+  color: #a6a6a6;
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: 100;
+  margin-bottom: 0.8em;
+  padding: 0.2em 0.3em;
+  &:focus {
+    border-color: #a6a6a6;
+    outline: none;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.logout {
+  float: right;
 }

@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Make a Post <%= yield :page_number %></title>
+  <title>GLMP <%= yield :page_number %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <%= link_to "logout", login_url, :method => :delete %>
-  </nav>
   <section id="forum_page">
     <%= yield %>
   </section>
+  <%= link_to "logout", login_url, :method => :delete, :class => "logout" %>
 </body>
 </html>

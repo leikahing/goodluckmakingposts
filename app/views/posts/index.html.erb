@@ -1,9 +1,7 @@
 <header class="posts_header">
-  <%= link_to "Add Reply", new_post_url %>
+  Make a Post 4.50; Discuss. <%= link_to "( Newest Post )", posts_url %>
+  <%= link_to image_tag('settings.png'), edit_users_url %>
 </header>
-
 <%= render @posts %>
-
-<footer class="posts_footer">
-  <%= link_to "Add Reply", new_post_url %>
-</footer>
+<h4>Quick Reply</h4>
+<%= render :partial => "new" %>
