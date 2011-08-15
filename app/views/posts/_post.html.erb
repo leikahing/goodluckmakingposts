@@ -1,22 +1,22 @@
-<div class="post clearfix">
+<div class="post clearfix" id=<%= post.id %>>
   <div class="avatar">
     <%= image_tag post.user.avatar.url(:thumb) %>
   </div>
 
   <div class="user_info">
     <div class="user_name">
-      <%=h post.user.name %>
+      <%= post.user.name %>
     </div>
 
     <div class="user_title" %>
-      <%=h post.user.title %>
+      <%= post.user.title %>
     </div>
 
     <div class="user_status" %>
-      Logged In
+      <%= post.id %>
     </div>
   </div>
   <div class="post_content">
-    <p><%=h post.content %></p>
+    <%= Kramdown::Document.new( post.content ).to_html.html_safe %>
   </div>
 </div>

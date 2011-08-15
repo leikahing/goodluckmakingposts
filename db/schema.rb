@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
     t.integer  "user_id"
     t.integer  "thread_id"
     t.integer  "post_number"
-    t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -28,9 +27,10 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
     t.string   "name"
     t.string   "email"
     t.string   "title"
-    t.boolean  "is_admin"
-    t.boolean  "is_moderator"
-    t.boolean  "is_banned"
+    t.boolean  "is_admin",            :default => false
+    t.boolean  "is_moderator",        :default => false
+    t.boolean  "is_banned",           :default => false
+    t.boolean  "has_activated",       :default => false
     t.string   "preferences"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"

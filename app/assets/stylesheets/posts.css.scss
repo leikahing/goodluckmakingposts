@@ -15,10 +15,11 @@
 }
 
 .post {
-  margin-top: 20px;
   background-color: #373737;
   color: white;
   min-height: 100px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 
   .avatar {
     padding-top: 10px;
@@ -30,11 +31,11 @@
     height: 4px;
 
     .user_name {
-      font-size: 20pt;
-      font-weight: 100;
+      float: left;
       padding-left: 10px;
       margin-top: -6px;
-      float: left;
+      font-size: 20pt;
+      font-weight: 100;
     }
 
     .user_title {
@@ -53,7 +54,6 @@
 
     p {
       overflow: auto;
-      padding: 5px 0 0 10px;
     }
   }
 }

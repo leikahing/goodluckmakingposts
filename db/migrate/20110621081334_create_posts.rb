@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :thread_id
 
       t.integer :post_number
-      t.string :title
       t.text :content
 
       t.timestamps

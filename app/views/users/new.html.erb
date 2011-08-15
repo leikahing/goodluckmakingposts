@@ -3,11 +3,11 @@
 </header>
 <section id="new_user_section">
 <div class='errors'>
-  <% @user.errors.full_messages.each do |error| %>
+  <% user.errors.full_messages.each do |error| %>
     <p><%= error %></p>
   <% end %>
 </div>
-<%= form_for @user, :html => { :multipart => true } do |f| %>
+<%= form_for user, :html => { :multipart => true } do |f| %>
   email<%= f.label :email; f.text_field :email %>
   name<%= f.label :name; f.text_field :name %>
   password<%= f.label :password; f.password_field :password %>

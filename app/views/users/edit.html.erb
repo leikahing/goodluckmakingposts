@@ -1,0 +1,6 @@
+<h1>Settings</h1>
+<% form_for user do |f| %>
+  <%= f.label :posts_per_page %>
+  <%= f.number_field :posts_per_page %>
+  <%= f.submit "Save preferences" %>
+<% end %>
