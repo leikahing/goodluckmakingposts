@@ -7,13 +7,34 @@
     <p><%= error %></p>
   <% end %>
 </div>
-<%= form_for user, :html => { :multipart => true } do |f| %>
-  email<%= f.label :email; f.text_field :email %>
-  name<%= f.label :name; f.text_field :name %>
-  title<%= f.label :title; f.text_field :title %>
-  password<%= f.label :password; f.password_field :password %>
-  password confirmation<%= f.label :password_confirmation; f.password_field :password_confirmation %>
-  avatar<%= f.label :avatar; f.file_field :avatar %>
-  <%= f.submit 'submit' %>
+<%= form_for user, :html => { :class => "user_form", :multipart => true } do |f| %>
+  <div class="form_field">
+    <%= f.label :email, 'email' %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="form_field">
+    <%= f.label :name, 'name' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form_field">
+    <%= f.label :title, 'title' %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form_field">
+    <%= f.label :password, 'password' %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="form_field">
+    <%= f.label :password_confirmation, 'password_confirmation' %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="form_field">
+    <%= f.label :avatar, 'avatar' %>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="form_action">
+    <%= f.submit 'submit', :class => "button" %>
+  </div>
 <% end %>
 </section>
+<%= link_to 'home', home_url, :class => "nav_link" %>

@@ -59,19 +59,14 @@
 }
 
 .new_post {
+
   p {
     font-size: 24px;
     font-weight: 100;
+    margin: 10px 0 0 0;
   }
 
   textarea {
     width: 100%;
-  }
-
-  .button {
-    float:right;
-    padding: 6px 10px 6px 10px;
-    margin: 3px 0 3px 0;
-    background-color: #333333;
   }
 }

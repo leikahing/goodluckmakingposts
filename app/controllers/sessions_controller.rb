@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
   skip_before_filter :require_login
   layout 'login'
 
+  def new
+    redirect_to home_url if session[:user_id]
+  end
+
   def create
     if user = User.find_by_name( params[:name] ).try( :authenticate, params[:password] )
       session[:user_id] = user.id

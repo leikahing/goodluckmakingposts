@@ -1,6 +1,6 @@
 <section id="log_in">
 <%= flash[:error] %>
-<%= form_tag login_url, :class => "two_column_form" do %>
+<%= form_tag login_url, :class => "login_form" do %>
   <div class="form_field">
     <%= label_tag :name, 'name' %>
     <%= text_field_tag :name %>
@@ -10,8 +10,8 @@
     <%= password_field_tag :password %>
   </div>
   <div class="form_action">
-    <%= submit_tag 'login' %>
-    <%= link_to 'sign up', new_users_url %>
+    <%= submit_tag 'login', :class => "button" %>
   </div>
 <% end %>
 </section>
+<%= link_to 'sign up', new_users_url, :class => "nav_link" %>

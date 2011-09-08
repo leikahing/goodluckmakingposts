@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def create
     post.user = current_user
     if post.save
-      redirect_to posts_url(:page => params[:page]), :notice => "Post created."
+      redirect_to posts_url(:page => params[:page])
     else
       index
     end

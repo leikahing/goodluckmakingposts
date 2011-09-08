@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def create
     if user.valid?
-      user.preferences[:posts_per_page] = 100
       session[:user_id] = user.id
       redirect_to home_url
     else
@@ -14,9 +13,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
   def update
-    if user.save
-      redirect_to users_path(user)
+    @user = current_user
+    if user.update_attributes params[:user]
+      redirect_to home_url
     else
       render :edit
     end

@@ -13,7 +13,7 @@
     </div>
 
     <div class="user_status" %>
-      <%= link_to post.id, post %>
+      <%= link_to post.id, posts_path( :page => params[:page], :anchor => post ) %>
     </div>
   </div>
   <div class="post_content">
