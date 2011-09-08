@@ -58,9 +58,20 @@
   }
 }
 
-.add_post {
-  float:right;
-  padding: 6px 10px 6px 10px;
-  margin: 3px 0 3px 0;
-  background-color: #333333;
+.new_post {
+  p {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .button {
+    float:right;
+    padding: 6px 10px 6px 10px;
+    margin: 3px 0 3px 0;
+    background-color: #333333;
+  }
 }

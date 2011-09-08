@@ -10,6 +10,7 @@
 <%= form_for user, :html => { :multipart => true } do |f| %>
   email<%= f.label :email; f.text_field :email %>
   name<%= f.label :name; f.text_field :name %>
+  title<%= f.label :title; f.text_field :title %>
   password<%= f.label :password; f.password_field :password %>
   password confirmation<%= f.label :password_confirmation; f.password_field :password_confirmation %>
   avatar<%= f.label :avatar; f.file_field :avatar %>

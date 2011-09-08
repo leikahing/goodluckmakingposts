@@ -1,4 +1,7 @@
-<%= form_for Post.new do |f| %>
-  <%= f.label :content %><%= f.text_area :content %>
-  <%= f.submit "Add Reply", :class => "add_post clearfix" %>
+<%= form_for post do |f| %>
+  <%= f.text_area :content %>
+  <div class="form_action">
+    <%= f.submit "Add Reply" %>
+  </div>
+  <%= hidden_field_tag :page, params[:page] %>
 <% end %>

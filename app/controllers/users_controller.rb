@@ -2,10 +2,11 @@ class UsersController < ApplicationController
   helper_method :user
 
   skip_before_filter :require_login, :only => [:new, :create]
-  layout "login", :only => [ :new, :create ]
+  layout 'login'
 
   def create
-    if user.save
+    if user.valid?
+      user.preferences[:posts_per_page] = 100
       session[:user_id] = user.id
       redirect_to home_url
     else

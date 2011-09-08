@@ -13,10 +13,10 @@
     </div>
 
     <div class="user_status" %>
-      <%= post.id %>
+      <%= link_to post.id, post %>
     </div>
   </div>
   <div class="post_content">
-    <%= Kramdown::Document.new( post.content ).to_html.html_safe %>
+    <%= sanitize Kramdown::Document.new( Rinku.auto_link(post.content) ).to_html %>
   </div>
 </div>

@@ -1,18 +1,29 @@
 require 'kramdown'
+require 'rinku'
 
 class PostsController < ApplicationController
+  helper_method :post
 
   def index
-    @posts = Post.all
+    @posts = Post.order(:created_at).page params[:page]
   end
 
   def create
-    post = Post.new( params[:post] )
     post.user = current_user
     if post.save
-      redirect_to posts_url, :notice => "Post created."
+      redirect_to posts_url(:page => params[:page]), :notice => "Post created."
     else
       index
+    end
+  end
+
+  private
+
+  def post
+    @post = if params[:id]
+      Post.find params[:id]
+    else
+      Post.new(params[:post]).tap {|p| p.user = current_user}
     end
   end
 end

@@ -32,28 +32,10 @@ h4 {
   font-size: 18pt;
 }
 
-hr, label { display: none; }
-
 a {
   color: #fff;
   text-decoration: none;
-  &:hover { color: #f00 }
-}
-
-input {
-  background: #000;
-  border: 1px solid #4d4d4d;
-  color: #a6a6a6;
-  display: block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14pt;
-  font-weight: 100;
-  margin-bottom: 0.8em;
-  padding: 0.2em 0.3em;
-  &:focus {
-    border-color: #a6a6a6;
-    outline: none;
-  }
+  &:hover { color: #f00; }
 }
 
 .clearfix {
@@ -62,4 +44,41 @@ input {
 
 .logout {
   float: right;
+}
+
+/* forms */
+.two_column_form {
+  width: 500px;
+
+  .form_field {
+    clear: both;
+
+    input {
+      float: right;
+      background: #000;
+      border: 1px solid #4d4d4d;
+      color: #a6a6a6;
+      display: inline-block;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14pt;
+      font-weight: 100;
+      margin-bottom: 0.8em;
+      padding: 0.2em 0.3em;
+      &:focus {
+        border-color: #a6a6a6;
+        outline: none;
+      }
+    }
+
+    label {
+      margin-top: 10px;
+      float: left;
+    }
+  }
+
+  .form_action {
+    clear: both;
+    float: right;
+    input a { clear: both; float: right;}
+  }
 }

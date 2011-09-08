@@ -1,7 +1,10 @@
 <header class="posts_header">
-  Make a Post 4.50; Discuss. <%= link_to "( Newest Post )", posts_url %>
+Make a Post 4.50; Discuss. <%= link_to "( Newest Post )", posts_path( :page => @posts.num_pages, :anchor => @posts.last )%>
   <%= link_to image_tag('settings.png'), edit_users_url %>
 </header>
 <%= render @posts %>
-<h4>Quick Reply</h4>
-<%= render :partial => "new" %>
+<%= paginate @posts %>
+<div class="new_post">
+  <p>Quick Reply</p>
+  <%= render :partial => "new" %>
+</div>

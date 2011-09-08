@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # core application gems
-gem 'rails', '3.1.0.rc5'
+gem 'rails'
 gem 'sqlite3'
 gem 'jquery-rails'
 
@@ -9,9 +9,10 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'paperclip'
 gem 'kramdown'
+gem 'rinku'
 
 # asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
+gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 
@@ -23,4 +24,5 @@ end
 group :development do
   gem 'guard-rspec'
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'thin'
 end

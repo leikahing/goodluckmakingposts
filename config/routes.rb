@@ -1,5 +1,7 @@
 Forums::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    get 'page/:page', :action => :index, :on => :collection
+  end
   resource :login, :only => [:create, :destroy], :controller => 'sessions'
   resource :users, :only => [:new, :create, :edit, :update]
   match "/home" => "posts#index"
