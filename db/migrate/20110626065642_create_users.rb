@@ -9,7 +9,6 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :is_admin, :default => false
       t.boolean :is_moderator, :default => false
       t.boolean :is_banned, :default => false
-      t.boolean :has_activated, :default => false
 
       t.string :preferences
 
