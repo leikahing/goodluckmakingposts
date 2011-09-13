@@ -6,89 +6,151 @@
  *= require_tree .
 */
 
+// Variables
+$base_uri: "";
+$font_family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+
+$background_color: #000;
+$text_color: #a6a6a6;
+$link_color: #fff;
+$hover_color: #74b9e1;
+$active_color: #74e1af;
+$border_color: #4d4d4d;
+
+// Mixins
+@mixin BorderRadius($r) {
+	border-radius: $r;
+	-moz-border-radius: $r;
+	-webkit-border-radius: $r;
+}
+
+// Main
 body {
-  background-color: black;
-  color: #a6a6a6;
-  font-family: 'Segoe UI Light', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 11pt;
-  font-weight: 300;
-  margin: auto;
-  max-width: 940px;
-  min-width: 560px;
+	background-color: $background_color;
+	color: $text_color;
+	font-family: $font_family;
+	font-size: 11pt;
+	font-weight: 300;
+	margin: 0 auto;
+	max-width: 940px;
+	min-width: 560px;
 }
-
-h1 {
-  font-weight: 100;
-  font-size: 36pt;
+hr {
+	display: none;
 }
-
-h3 {
-  font-weight: 100;
-  font-size: 24pt;
-}
-
+h1,
+h2,
+h3,
 h4 {
-  font-weight: 100;
-  font-size: 18pt;
+	cursor: default;
+	font-weight: 100;
 }
-
+h1 {
+	font-size: 36pt;
+}
+h2 {
+	font-size: 28pt;
+}
+h3 {
+	font-size: 24pt;
+}
+h4 {
+	font-size: 18pt;
+}
 a {
-  color: #fff;
-  text-decoration: none;
-  &:hover { color: #f00; }
+	color: $link_color;
+	text-decoration: none;
+	
+	&:hover,
+	&:focus {
+		color: $hover_color;
+	}
+	&:active {
+		color: $active_color;
+	}
 }
-
 .clearfix {
-  clear: both;
+	clear: both;
 }
-
-
 .button {
-  border-radius: 6px;
-  -moz-border-radius: 6px;
+	background: $background_color;
+	border: 0;
+	color: $link_color;
+	cursor: pointer;
+	font-family: $font_family;
+	font-size: 18pt;
+	font-weight: 100 !important;
+	padding: 0;
+	
+	&:hover,
+	&:focus {
+		color: $hover_color;
+	}
+	&:active {
+		color: $active_color;
+	}
 }
-
 .nav_link {
-  float: left;
+	float: left;
 }
 
-/* forms */
+// Templates
+.error {
+	background: #f00;
+	color: #fff;
+	display: inline-block;
+	margin: 0 0 1em 0;
+	padding: 0.4em 0.6em;
+	text-shadow: 0.1em 0.1em #000;
+	@include BorderRadius(5px);
+}
+
+// Log in
+#login {
+	margin-bottom: 0.4em;
+}
+#sign_up {
+	margin-top: 0.8em;
+}
+
+// Forms
 .user_form {
-  width: 450px;
+	width: 450px;
 }
-
 .login_form {
-  width: 300px;
+	width: 300px;
 }
-
 .form_field {
-  clear: both;
+	clear: both;
 
-  input {
-    float: right;
-    background: #000;
-    border: 1px solid #4d4d4d;
-    color: #a6a6a6;
-    display: inline-block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14pt;
-    font-weight: 100;
-    margin-bottom: 0.8em;
-    padding: 0.2em 0.3em;
-    &:focus {
-      border-color: #a6a6a6;
-      outline: none;
-    }
-  }
-
-  label {
-    margin-top: 10px;
-    float: left;
-  }
+	input {
+		float: right;
+		background: $background_color;
+		border: 1px solid $border_color;
+		color: $text_color;
+		display: inline-block;
+		font-family: $font_family;
+		font-size: 14pt;
+		font-weight: 100;
+		margin-bottom: 0.8em;
+		padding: 0.2em 0.3em;
+		
+		&:focus {
+			border-color: $text_color;
+			outline: none;
+		}
+	}
+	label {
+		margin-top: 10px;
+		float: left;
+	}
 }
-
 .form_action {
-  clear: both;
-  float: right;
-  input a { clear: both; float: right;}
+	clear: both;
+	float: right;
+	
+	input a {
+		clear: both;
+		float: right;
+	}
 }
