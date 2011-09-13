@@ -2,16 +2,16 @@
 <%= flash[:error] %>
 <%= form_tag login_url, :class => "login_form" do %>
   <div class="form_field">
-    <%= label_tag :name, 'name' %>
+    <%= label_tag :name, 'User name:' %>
     <%= text_field_tag :name %>
   </div>
   <div class="form_field">
-    <%= label_tag :password, 'password' %>
+    <%= label_tag :password, 'Password:' %>
     <%= password_field_tag :password %>
   </div>
   <div class="form_action">
-    <%= submit_tag 'login', :class => "button" %>
+    <%= submit_tag 'Log in', :class => "button" %>
   </div>
 <% end %>
 </section>
-<%= link_to 'sign up', new_users_url, :class => "nav_link" %>
+<small><%= link_to 'Sign up', new_users_url, :class => "nav_link", :id => "sign_up" %></small>
