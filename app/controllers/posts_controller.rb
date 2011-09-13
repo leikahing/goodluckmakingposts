@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if post.save
+    if post.update_attributes params[:post]
       redirect_to posts_url(:page => params[:page])
     else
       index
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post = if params[:id]
       Post.find params[:id]
     else
-      Post.new(params[:post]).tap {|p| p.user = current_user}
+      current_user.posts.new params[:post]
     end
   end
 end

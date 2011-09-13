@@ -25,14 +25,6 @@ ActiveRecord::Schema.define(:version => 20110626065642) do
     t.string   "name"
     t.string   "email"
     t.string   "title"
-    t.boolean  "is_admin",            :default => false
-    t.boolean  "is_moderator",        :default => false
-    t.boolean  "is_banned",           :default => false
-    t.string   "preferences"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
