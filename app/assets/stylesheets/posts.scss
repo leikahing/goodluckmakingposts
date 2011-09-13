@@ -26,7 +26,7 @@
     float: left;
   }
 
-  .user_info {
+  .post_info {
     padding: 6px 10px 10px 10px;
     height: 4px;
 
@@ -44,8 +44,12 @@
       color: gray;
     }
 
-    .user_status {
-      float: right;
+    .links {
+      a {
+        float: right;
+        margin-left: 10px;
+        font-size: 12px;
+      }
     }
   }
 
@@ -58,8 +62,7 @@
   }
 }
 
-.new_post {
-
+.new_post, .edit_post {
   p {
     font-size: 24px;
     font-weight: 100;

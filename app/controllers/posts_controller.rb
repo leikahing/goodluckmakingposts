@@ -9,7 +9,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    post.user = current_user
+    if post.save
+      redirect_to posts_url(:page => params[:page])
+    else
+      index
+    end
+  end
+
+  def update
     if post.save
       redirect_to posts_url(:page => params[:page])
     else

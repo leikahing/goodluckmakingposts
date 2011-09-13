@@ -3,7 +3,7 @@
     <%= image_tag post.user.avatar.url(:thumb) %>
   </div>
 
-  <div class="user_info">
+  <div class="post_info">
     <div class="user_name">
       <%= post.user.name %>
     </div>
@@ -12,8 +12,9 @@
       <%= post.user.title %>
     </div>
 
-    <div class="user_status" %>
+    <div class="links" %>
       <%= link_to post.id, posts_path( :page => params[:page], :anchor => post ) %>
+      <%= link_to 'edit', edit_post_path(post) %>
     </div>
   </div>
   <div class="post_content">
