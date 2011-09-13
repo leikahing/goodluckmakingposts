@@ -1,41 +1,41 @@
 <header id="new_user_header">
-	<h2>Create account</h2>
+  <h2>Create account</h2>
 </header>
 <hr />
 
 <section id="new_user_section">
-	<% user.errors.full_messages.each do |error| %>
-		<p class="error"><%= error %></p>
-	<% end %>
+  <% user.errors.full_messages.each do |error| %>
+    <p class="error"><%= error %></p>
+  <% end %>
 
-	<%= form_for user, :html => { :class => "user_form", :multipart => true } do |f| %>
-	  <div class="form_field">
-	    <%= f.label :email, 'Email:' %>
-	    <%= f.text_field :email %>
-	  </div>
-	  <div class="form_field">
-	    <%= f.label :name, 'Username:' %>
-	    <%= f.text_field :name %>
-	  </div>
-	  <div class="form_field">
-	    <%= f.label :title, 'Title:' %>
-	    <%= f.text_field :title %>
-	  </div>
-	  <div class="form_field">
-	    <%= f.label :password, 'Password:' %>
-	    <%= f.password_field :password %>
-	  </div>
-	  <div class="form_field">
-	    <%= f.label :password_confirmation, 'Repeat password:' %>
-	    <%= f.password_field :password_confirmation %>
-	  </div>
-	  <div class="form_field">
-	    <%= f.label :avatar, 'Avatar:' %>
-	    <%= f.file_field :avatar %>
-	  </div>
-	  <div class="form_action">
-	    <%= f.submit 'Register', :class => "button" %>
-	  </div>
-	<% end %>
-	</section>
+  <%= form_for user, :html => { :class => "user_form", :multipart => true } do |f| %>
+    <div class="form_field">
+      <%= f.label :email, 'Email:' %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="form_field">
+      <%= f.label :name, 'Username:' %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="form_field">
+      <%= f.label :title, 'Title:' %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form_field">
+      <%= f.label :password, 'Password:' %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="form_field">
+      <%= f.label :password_confirmation, 'Repeat password:' %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="form_field">
+      <%= f.label :avatar, 'Avatar:' %>
+      <%= f.file_field :avatar %>
+    </div>
+    <div class="form_action">
+      <%= f.submit 'Register', :class => "button" %>
+    </div>
+  <% end %>
+  </section>
 <!--<%= link_to 'home', home_url, :class => "nav_link" %>-->
