@@ -1,11 +1,10 @@
 class UsersController < ApplicationController
-  helper_method :user
-
   skip_before_filter :require_login, :only => [:new, :create]
   layout 'login'
+  helper_method :user
 
   def create
-    if user.valid?
+    if user.save
       session[:user_id] = user.id
       redirect_to home_url
     else
@@ -13,12 +12,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-    @user = current_user
-  end
-
   def update
-    @user = current_user
     if user.update_attributes params[:user]
       redirect_to home_url
     else
@@ -29,10 +23,10 @@ class UsersController < ApplicationController
   private
 
   def user
-    @user ||= if params[:id]
-      User.find params[:id]
+    @user ||= if params[:user]
+      current_user
     else
-      User.new params[:user]
+      User.new
     end
   end
 end
