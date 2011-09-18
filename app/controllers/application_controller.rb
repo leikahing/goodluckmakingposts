@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if session[:user_id]
-      @current_user ||= User.find( session[:user_id] )
+      @current_user ||= User.find session[:user_id]
     else
       @current_user
     end
@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless current_user
-      redirect_to root_url, :notice => "Login required."
+      redirect_to root_url, notice: "Login required."
     end
   end
 end

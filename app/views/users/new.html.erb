@@ -10,12 +10,12 @@
 
   <%= form_for user, :html => { :class => "user_form", :multipart => true } do |f| %>
     <div class="form_field">
-      <%= f.label :email, 'Email:' %>
-      <%= f.text_field :email %>
-    </div>
-    <div class="form_field">
       <%= f.label :name, 'Username:' %>
       <%= f.text_field :name %>
+    </div>
+    <div class="form_field">
+      <%= f.label :email, 'Email:' %>
+      <%= f.text_field :email, :placeholder => "used to find your gravatar" %>
     </div>
     <div class="form_field">
       <%= f.label :title, 'Title:' %>
@@ -30,8 +30,7 @@
       <%= f.password_field :password_confirmation %>
     </div>
     <div class="form_field">
-      <%= f.label :avatar, 'Avatar:' %>
-      <%= f.file_field :avatar %>
+      <%= recaptcha_tags %>
     </div>
     <div class="form_action">
       <%= f.submit 'Register', :class => "button" %>

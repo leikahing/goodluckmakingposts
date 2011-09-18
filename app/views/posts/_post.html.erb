@@ -1,6 +1,6 @@
 <div class="post clearfix" id=<%= post.id %>>
   <div class="avatar">
-    <%= image_tag gravatar_url_for( post.email ), {:width => 80, :height => 80 } %>
+  <%= image_tag post.user.gravatar_url(secure: true, default: 'identicon') %>
   </div>
 
   <div class="post_info">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="links" %>
-      <%= link_to post.id, posts_path( :page => params[:page], :anchor => post ) %>
+      <%= link_to post.id, posts_path( page: params[:page], anchor: post ) %>
       <%= link_to 'edit', edit_post_path(post) %>
     </div>
   </div>

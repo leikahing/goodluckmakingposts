@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     if post.save
-      redirect_to posts_url(:page => params[:page])
+      redirect_to posts_url(page: params[:page])
     else
       index
     end
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   def update
     if post.update_attributes params[:post]
-      redirect_to posts_url(:page => params[:page])
+      redirect_to posts_url(page: params[:page])
     else
       index
     end

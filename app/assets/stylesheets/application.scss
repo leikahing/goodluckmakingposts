@@ -134,7 +134,7 @@ a {
     font-weight: 100;
     margin-bottom: 0.8em;
     padding: 0.2em 0.3em;
-    
+
     &:focus {
       border-color: $text_color;
       outline: none;
@@ -148,7 +148,7 @@ a {
 .form_action {
   clear: both;
   float: right;
-  
+
   input a {
     clear: both;
     float: right;
