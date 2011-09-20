@@ -10,7 +10,6 @@ gem 'kaminari'
 gem 'paperclip'
 gem 'kramdown'
 gem 'rinku'
-gem 'recaptcha', :require => 'recaptcha/rails'
 gem 'gravtastic'
 
 # asset template engines

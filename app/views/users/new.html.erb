@@ -15,7 +15,7 @@
     </div>
     <div class="form_field">
       <%= f.label :email, 'Email:' %>
-      <%= f.text_field :email, :placeholder => "used to find your gravatar" %>
+      <%= f.text_field :email, :placeholder => "for gravatar" %>
     </div>
     <div class="form_field">
       <%= f.label :title, 'Title:' %>
@@ -30,7 +30,8 @@
       <%= f.password_field :password_confirmation %>
     </div>
     <div class="form_field">
-      <%= recaptcha_tags %>
+      <%= label_tag :ramen, "Best food ever:" %>
+      <%= text_field_tag :ramen %>
     </div>
     <div class="form_action">
       <%= f.submit 'Register', :class => "button" %>
