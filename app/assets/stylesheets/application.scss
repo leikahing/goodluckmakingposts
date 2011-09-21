@@ -1,6 +1,4 @@
 // Variables
-$base_uri: "";
-$sprite: "sprite_opt.png";
 $font_family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
 $body_width: 940px;
 
@@ -19,7 +17,7 @@ $error_color:       #ff0;
   -webkit-border-radius: $r;
 }
 @mixin Sprite {
-  background-image: url('sprite_opt.png');
+  background-image: url('http://goodluckmakingrent.com/glmp/sprite_opt.png');
   background-repeat: no-repeat;
 }
 
@@ -155,7 +153,7 @@ a {
 
 // Posts
 header {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 30px;
   
   h1, h2 {
@@ -372,9 +370,10 @@ article {
   }
   p {
 		margin: 1.2em 0;
-	}
-	p a {
-		text-decoration: underline;
+		
+		a {
+  		text-decoration: underline;
+  	}
 	}
 	blockquote {
 		background: #111;
@@ -385,24 +384,9 @@ article {
 		  margin-top: 0;
 		}
 	}
-}
-textarea {
-  background: $background_color;
-  border: 1px solid $border_color;
-  color: $text_color;
-  font-family: $font_family;
-  font-size: 12pt;
-  font-weight: 300;
-  margin-bottom: 8px;
-  padding: 8px;
-  width: $body_width - 16px;
-  
-  &:hover {
-    border-color: #666;
-  }
-  &:focus{
-    border-color: $text_color;
-    outline: none;
+	img {
+    max-width: 640px;
+    max-height: 640px;
   }
 }
 
@@ -422,5 +406,25 @@ textarea {
     cursor: none;
     font-size: 24px;
     font-weight: 100;
+  }
+}
+
+textarea {
+  background: $background_color;
+  border: 1px solid $border_color;
+  color: $text_color;
+  font-family: $font_family;
+  font-size: 12pt;
+  font-weight: 300;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: $body_width - 16px;
+  
+  &:hover {
+    border-color: #666;
+  }
+  &:focus{
+    border-color: $text_color;
+    outline: none;
   }
 }
