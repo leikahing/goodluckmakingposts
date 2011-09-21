@@ -10,12 +10,13 @@
 $base_uri: "";
 $font_family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
 
-$background_color: #000;
-$text_color: #a6a6a6;
-$link_color: #fff;
-$hover_color: #74b9e1;
-$active_color: #74e1af;
-$border_color: #4d4d4d;
+$background_color:  #000;
+$text_color:        #a6a6a6;
+$link_color:        #fff;
+$hover_color:       #74b9e1;
+$active_color:      #74e1af;
+$border_color:      #4d4d4d;
+$error_color:       #ff0;
 
 // Mixins
 @mixin BorderRadius($r) {
@@ -49,13 +50,13 @@ h1 {
   font-size: 36pt;
 }
 h2 {
-  font-size: 28pt;
-}
-h3 {
   font-size: 24pt;
 }
-h4 {
+h3 {
   font-size: 18pt;
+}
+h4 {
+  font-size: 14pt;
 }
 a {
   color: $link_color;
@@ -96,7 +97,7 @@ a {
 
 // Templates
 .error {
-  background: #f00;
+  background: $error_color;
   color: #fff;
   display: inline-block;
   margin: 0 0 1em 0;
