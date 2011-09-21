@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GLMP</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <title>GLMP</title>
+    <%= stylesheet_link_tag     "application" %>
+    <%= javascript_include_tag  "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" %>
+    <%= javascript_include_tag  "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 <body>
   <section id="forum_page">
     <%= yield %>
   </section>
-  <%= link_to "logout", login_url, method: :delete, class: "logout" %>
 </body>
 </html>

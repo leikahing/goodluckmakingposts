@@ -1,10 +1,23 @@
-<header class="posts_header">
-Make a Post 4.50; Discuss. <%= link_to "( Newest Post )", posts_path( :page => @posts.num_pages, :anchor => @posts.last )%>
-  <%= link_to image_tag('settings.png'), edit_users_url %>
+<header>
+  <%= link_to "Settings", edit_users_url, id: "settings" %>
+  <%= link_to "Sign out", login_url, method: :delete, id: "logout" %>
+  <hgroup>
+    <h1><%= link_to "Make a Post", posts_path %></h1>
+    <h2>( <%= link_to "Newest Post", posts_path( :page => @posts.num_pages, :anchor => @posts.last )%> )</h2>
+  </hgroup>
 </header>
-<%= render @posts %>
+<hr />
+
 <%= paginate @posts %>
-<div class="new_post">
-  <p>Quick Reply</p>
+
+<section id="posts">
+  <%= render @posts %>
+</section>
+
+<%= paginate @posts %>
+<hr />
+
+<div id="quick-reply">
+  <h1>Quick Reply</h1>
   <%= render :partial => "new" %>
 </div>
