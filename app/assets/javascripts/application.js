@@ -4,7 +4,7 @@ var numIsEven = function(n) {
 
 $(document).ready(function() {
   $('article').each(function() {
-    if (numIsEven(this.attr('id'))) {
+    if (numIsEven($(this).attr('id'))) {
       $(this).addClass('zebra');
     }
   });
