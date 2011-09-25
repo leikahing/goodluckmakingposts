@@ -13,6 +13,8 @@
   </section>
 
   <div class="post-pop">
-    <%= link_to 'Edit', edit_post_path(post), :class => "post-edit" %>
+    <% if post.user == current_user %>
+      <%= link_to 'Edit', edit_post_path(post), :class => "post-edit" %>
+    <% end %>
   </div>
 </article>
