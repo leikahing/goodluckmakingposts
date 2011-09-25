@@ -1,11 +1,3 @@
-var numIsEven = function(n) {
-  return (n % 2 === 0) ? true : false;
-};
-
-$(document).ready(function() {
-  $('article').each(function() {
-    if (numIsEven($(this).attr('id'))) {
-      $(this).addClass('zebra');
-    }
-  });
-});
+//= require jquery
+//= require jquery_ujs
+//= require_tree .

@@ -1,0 +1,254 @@
+header {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  h1, h2 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 22pt;
+    margin-top: 0.5em;
+
+    a { color: $text_color; }
+  }
+
+  h2 {
+    font-size: 14pt;
+    margin-left: 1em;
+  }
+}
+
+#settings {
+  @include Sprite;
+  background-color: $link_color;
+  background-position: 0px -81px;
+  color: $link_color;
+  display: block;
+  float: right;
+  height: 21px;
+  text-indent: -1000em;
+  width: 21px;
+
+  &:hover, &:focus {
+    background-color: $hover_color;
+    color: $hover_color;
+  }
+
+  &:active {
+    background-color: $active_color;
+    color: $active_color;
+  }
+}
+
+.pagination {
+  cursor: default;
+  font-size: 12pt;
+  font-weight: 100;
+  height: 25px;
+  line-height: 25px;
+  margin: -10px 0;
+
+  ul {
+    display: inline;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+    margin-left: 0.15em;
+
+    a {
+      background: #000;
+      padding: 0.1em 0.35em;
+
+      &:hover {
+        background-color: #74b9e1;
+        color: #000;
+      }
+    }
+  }
+
+  .current {
+    background: #a6a6a6;
+    color: #000;
+    padding: 0.1em 0.35em;
+  }
+}
+
+.odd {
+  background-color: #373737;
+  color: #d9d9d9
+}
+
+.even {
+  background-color: #212121;
+  color: #bfbfbf;
+}
+
+// Individual posts
+article {
+  background-position: 0 12px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  padding-left: 65px;
+
+  blockquote {
+    background-color: #212121 !important;
+  }
+
+  .post-title {
+    h1, h2 {
+      display: inline-block;
+      margin: 0;
+    }
+    h1 {
+      color: #fff;
+      font-size: 15pt;
+      font-weight: normal;
+      margin-top: 12px;
+      margin-right: 0.25em;
+    }
+    h2 {
+      font-size: 11pt;
+      font-weight: normal;
+    }
+  }
+
+  .post-pop {
+    display: none;
+    float: left;
+    text-align: right;
+    height: 30px;
+    margin-left: -65px;
+    margin-top: -20px;
+    width: 940px;
+  }
+
+  .post-edit {
+    background: #000;
+    display: inline-block;
+    font-size: 14pt;
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 .6em;
+  }
+
+  &:hover {
+    .post-pop { display: block; }
+
+    .post-meta a {
+      color: $link_color;
+
+      &:hover, &:focus { color: $hover_color; }
+      &:active { color: $active_color; }
+    }
+  }
+}
+
+.post-meta {
+  float: right;
+  height: 12px;
+  line-height: 12px;
+  margin: 8px 8px 0 0;
+
+  a {
+    color: #888;
+  }
+}
+
+.post-content {
+  h1, h2 { margin: 0; }
+
+  p {
+    margin: 1.2em 0;
+
+    a { text-decoration: underline; }
+  }
+
+  blockquote {
+    background: #111;
+    margin-left: 15px;
+    padding: 10px 10px 10px 10px;
+
+    p { margin-top: 0; }
+  }
+
+  img {
+    max-width: 640px;
+    max-height: 640px;
+  }
+}
+
+// Quick reply
+#quick-reply {
+  margin-top: 3.5em;
+
+  h1 {
+    font-size: 18pt;
+    margin: 0 0 .3em 0;
+  }
+}
+
+// New & Edit
+.new_post, .edit_post {
+  h1 {
+    cursor: none;
+    font-size: 24px;
+    font-weight: 100;
+  }
+}
+
+textarea {
+  background: $background_color;
+  border: 1px solid $border_color;
+  color: $text_color;
+  font-family: $font_family;
+  font-size: 12pt;
+  font-weight: 300;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: $body_width - 16px;
+
+  &:hover { border-color: #666; }
+  &:focus{
+    border-color: $text_color;
+    outline: none;
+  }
+}
+
+// Buttons
+.add-reply {
+  @include Sprite;
+  background-color: $link_color;
+  background-position: 0px -140px;
+  border: none;
+  color: $link_color;
+  cursor: pointer;
+  display: block;
+  font-family: $font_family;
+  font-size: 15pt;
+  font-weight: 100;
+  float: right;
+  height: 26px;
+  line-height: 21px;
+  padding-left: 29px;
+  padding-right: 0;
+
+  &:hover, &:focus {
+    background-color: $hover_color;
+    color: $hover_color;
+  }
+
+  &:active {
+    background-color: $active_color;
+    color: $active_color;
+  }
+}

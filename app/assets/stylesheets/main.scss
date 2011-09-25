@@ -1,0 +1,80 @@
+body {
+  background-color: $background_color;
+  color: $text_color;
+  font-family: $font_family;
+  font-size: 11pt;
+  font-weight: 300;
+  margin: 0 auto 4em auto;
+  width: $body_width;
+}
+
+hr { display: none; }
+
+h1, h2, h3, h4 {
+  cursor: default;
+  font-weight: 100;
+}
+
+h1 { font-size: 36pt; }
+h2 { font-size: 24pt; }
+h3 { font-size: 18pt; }
+h4 { font-size: 14pt; }
+
+a { text-decoration: none; }
+
+.button {
+  background: $background_color;
+  border: 0;
+  cursor: pointer;
+  font-family: $font_family;
+  font-size: 18pt;
+  font-weight: 100;
+  padding: 0;
+
+}
+
+a, .button {
+  color: $link_color;
+  &:hover, &:focus { color: $hover_color; }
+  &:active { color: $active_color; }
+}
+
+.clearfix { clear: both; }
+.nav_link { float: left; }
+
+// Templates
+.error {
+  background: $error_color;
+  color: #fff;
+  display: inline-block;
+  margin: 0 0 1em 0;
+  padding: 0.4em 0.6em;
+  text-shadow: 0.1em 0.1em #000;
+  @include BorderRadius(5px);
+}
+
+// Login/Logout
+
+#sign_up { margin-top: 0.8em; }
+#login { margin-bottom: 0.4em; }
+#logout {
+  @include BorderRadius(4px);
+  background: $background_color;
+  display: block;
+  font-weight: 100;
+  float: right;
+  height: 21px;
+  line-height: 21px;
+  margin-right: 20px;
+  padding: 0 0.5em;
+
+  &:hover, &:focus {
+    background-color: $hover_color;
+    color: #000;
+  }
+
+  &:active {
+    background-color: $active_color;
+    color: #000;
+  }
+}

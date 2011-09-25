@@ -1,19 +1,18 @@
-<article id="<%= post.id %>" class="post clearfix" style="background-image: url('<%= post.user.gravatar_url( secure: true, default: 'retro', size: 50 ) %>');">
+<article id="<%= post.id %>" style="background-image: url('<%= post.user.gravatar_url( secure: true, default: 'retro', size: 50 ) %>');">
   <div class="post-meta">
-  	<%= link_to post.id, posts_path( page: params[:page], anchor: post ) %>
+    <%= link_to post.id, posts_path( page: params[:page], anchor: post ) %>
   </div>
-  
+
   <hgroup class="post-title">
-  	<h1><%= post.name %></h1>
-  	<h2><%= post.title %></h2>
+    <h1><%= post.name %></h1>
+    <h2><%= post.title %></h2>
   </hgroup>
-  
+
   <section class="post-content">
     <%= sanitize Kramdown::Document.new( Rinku.auto_link(post.content) ).to_html %>
   </section>
-  
+
   <div class="post-pop">
     <%= link_to 'Edit', edit_post_path(post), :class => "post-edit" %>
   </div>
 </article>
-<hr />

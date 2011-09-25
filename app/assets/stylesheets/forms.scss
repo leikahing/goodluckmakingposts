@@ -1,0 +1,39 @@
+.user_form { width: 450px; }
+.login_form { width: 300px; }
+
+.form_field {
+  clear: both;
+
+  input {
+    float: right;
+    background: $background_color;
+    border: 1px solid $border_color;
+    color: $text_color;
+    display: inline-block;
+    font-family: $font_family;
+    font-size: 14pt;
+    font-weight: 100;
+    margin-bottom: 0.8em;
+    padding: 0.2em 0.3em;
+
+    &:focus {
+      border-color: $text_color;
+      outline: none;
+    }
+  }
+
+  label {
+    margin-top: 10px;
+    float: left;
+  }
+}
+
+.form_action {
+  clear: both;
+  float: right;
+
+  input a {
+    clear: both;
+    float: right;
+  }
+}
