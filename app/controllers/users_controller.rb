@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    if params[:ramen] == 'ramen' && user.save
+    if sanitize(params[:ramen]) == 'ramen' && user.save
       session[:user_id] = user.id
       redirect_to home_url
     else
