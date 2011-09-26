@@ -1,3 +1,3 @@
 $ ->
-  $('section #posts article:nth-child(2n+1)').addClass 'odd'
-  $('section #posts article:nth-child(2n)').addClass 'even'
+  $('#posts article:nth-child(2n+1)').addClass 'odd'
+  $('#posts article:nth-child(2n)').addClass 'even'
