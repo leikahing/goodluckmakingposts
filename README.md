@@ -1,7 +1,7 @@
-#### Make A Post: a single thread, barebones forum for small communities
+#### goodluckmakingposts
 
-Super simple post stream.
+a collaborative, super simple post stream.
 
 * [Rinku](https://github.com/tanoku/rinku) for auto_link
 * [Kramdown](https://github.com/gettalong/kramdown) for Markdown
-* [Gravatar](http://en.gravatar.com/)
+* [Gravtastic](https://github.com/chrislloyd/gravtastic) for Gravatar handling
