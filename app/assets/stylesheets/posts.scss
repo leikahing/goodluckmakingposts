@@ -21,7 +21,6 @@ header {
 }
 
 #settings {
-  @include Sprite;
   background-color: $link_color;
   background-position: 0px -81px;
   color: $link_color;
@@ -142,7 +141,7 @@ article {
     font-weight: 100;
     height: 30px;
     line-height: 30px;
-    padding: 0 .6em;
+    padding: 0 0.6em;
   }
 
   &:hover {
@@ -200,16 +199,17 @@ article {
 
   h1 {
     font-size: 18pt;
-    margin: 0 0 .3em 0;
+    margin: 0 0 0.3em 0;
   }
 }
 
 // New & Edit
 .new_post, .edit_post {
   h1 {
-    cursor: none;
+    cursor: default;
     font-size: 24px;
     font-weight: 100;
+    margin: 1em 0 0.3em 0;
   }
 }
 
@@ -233,7 +233,6 @@ textarea {
 
 // Buttons
 .add-reply {
-  @include Sprite;
   background-color: $link_color;
   background-position: 0px -140px;
   border: none;
