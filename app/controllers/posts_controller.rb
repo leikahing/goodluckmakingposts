@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     if post.save
-      redirect_to posts_url(page: params[:page])
+      redirect_to posts_url(page: Post.page.num_pages)
     else
       index
     end

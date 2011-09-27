@@ -1,11 +1,11 @@
 <%= form_for user, :url => users_path, :html => { :class => "user_form", :multipart => true } do |f| %>
   <div class="form_field" %>
-    <%= f.label :title, 'title' %>
+    <%= f.label :title, 'Title:' %>
     <%= f.text_field :title %>
   </div>
   <div class="form_field" %>
-    <%= f.label :avatar, 'avatar' %>
-    <%= f.file_field :avatar %>
+    <%= f.label :email, 'Email:' %>
+    <%= f.file_field :email, :placeholder => "for gravatar" %>
   </div>
   <div class="form_action" %>
     <%= f.submit "Save preferences", :class => "button" %>

@@ -1,7 +1,7 @@
 <%= form_for post do |f| %>
   <%= f.text_area(:content, :rows => 10) %>
   <div class="form_action">
-    <%= f.submit "Post Reply", class: "add-reply" %>
+    <%= f.submit post.new_record? ? "Post Reply" : "Edit Post", class: "add-reply" %>
   </div>
   <%= hidden_field_tag :page, params[:page] %>
 <% end %>
