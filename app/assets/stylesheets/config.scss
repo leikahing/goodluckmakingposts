@@ -16,7 +16,3 @@ $error_color:       #ff0;
   -moz-border-radius: $r;
   -webkit-border-radius: $r;
 }
-@mixin Sprite {
-  background-image: url('http://goodluckmakingrent.com/glmp/sprite_opt.png');
-  background-repeat: no-repeat;
-}
