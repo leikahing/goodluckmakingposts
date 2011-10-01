@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Forums::Application.load_tasks
+GoodLuckMakingPosts::Application.load_tasks

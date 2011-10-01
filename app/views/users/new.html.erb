@@ -6,14 +6,14 @@
     <p class="error"><%= error %></p>
   <% end %>
 
-  <%= form_for user, :html => { :class => "user_form", :multipart => true } do |f| %>
+  <%= form_for user, html: { class: "user_form", multipart: true } do |f| %>
     <div class="form_field">
       <%= f.label :name, 'Username:' %>
       <%= f.text_field :name %>
     </div>
     <div class="form_field">
       <%= f.label :email, 'Email:' %>
-      <%= f.text_field :email, :placeholder => "for gravatar" %>
+      <%= f.text_field :email, placeholder: "for gravatar" %>
     </div>
     <div class="form_field">
       <%= f.label :title, 'Title:' %>
@@ -32,8 +32,8 @@
       <%= text_field_tag :ramen %>
     </div>
     <div class="form_action">
-      <%= f.submit 'Register', :class => "button" %>
+      <%= f.submit 'Register', class: "button" %>
     </div>
   <% end %>
   </section>
-<%= link_to 'home', home_url, :class => "nav_link" %>
+<%= link_to 'home', home_url, class: "nav_link" %>

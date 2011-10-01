@@ -1,14 +1,14 @@
-<%= form_for user, :url => users_path, :html => { :class => "user_form", :multipart => true } do |f| %>
+<%= form_for user, url: users_path, html: { class: "user_form", multipart: true } do |f| %>
   <div class="form_field" %>
     <%= f.label :title, 'Title:' %>
     <%= f.text_field :title %>
   </div>
   <div class="form_field" %>
     <%= f.label :email, 'Email:' %>
-    <%= f.file_field :email, :placeholder => "for gravatar" %>
+    <%= f.file_field :email, placeholder: "for gravatar" %>
   </div>
   <div class="form_action" %>
-    <%= f.submit "Save preferences", :class => "button" %>
+    <%= f.submit "Save preferences", class: "button" %>
   </div>
 <% end %>
-<%= link_to 'home', home_url, :class => "nav_link" %>
+<%= link_to 'home', home_url, class: "nav_link" %>

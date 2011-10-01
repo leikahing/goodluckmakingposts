@@ -9,12 +9,12 @@
   </hgroup>
 
   <section class="post-content">
-    <%= sanitize Kramdown::Document.new( Rinku.auto_link(post.content) ).to_html %>
+    <%= sanitize Kramdown::Document.new( Rinku.auto_link( post.content ) ).to_html %>
   </section>
 
   <div class="post-pop">
-    <% if post.user == current_user %>
-      <%= link_to 'Edit', edit_post_path(post), :class => "post-edit" %>
+    <% if current_user.can_edit_post?( post ) %>
+      <%= link_to 'Edit', edit_post_path( post ), class: "post-edit" %>
     <% end %>
   </div>
 </article>

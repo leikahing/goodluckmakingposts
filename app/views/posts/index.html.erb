@@ -3,7 +3,7 @@
   <%= link_to "Sign out", login_url, method: :delete, id: "logout" %>
   <hgroup>
     <h1><%= link_to "Make a Post", posts_path %></h1>
-    <h2>( <%= link_to "Newest Post", posts_path( :page => @posts.num_pages, :anchor => @posts.last )%> )</h2>
+    <h2>( <%= link_to "Newest Post", posts_path( page: @posts.num_pages, anchor: @posts.last )%> )</h2>
   </hgroup>
 </header>
 <hr />
@@ -19,5 +19,5 @@
 
 <div id="quick-reply">
   <h1>Quick Reply</h1>
-  <%= render :partial => "edit" %>
+  <%= render partial: "edit" %>
 </div>
